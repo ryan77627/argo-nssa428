@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: gitops-lab
-          image: ryan77627/argocd-lab-test:v2
+          image: ryan77627/argocd-lab-test:vbroken
           ports:
             - containerPort: 8080
