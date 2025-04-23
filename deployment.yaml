@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-lab-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitops-lab
+  template:
+    metadata:
+      labels:
+        app: gitops-lab
+    spec:
+      containers:
+        - name: gitops-lab
+          image: ryan77627/argocd-lab-test:v1
+          ports:
+            -containerPort: 8080
